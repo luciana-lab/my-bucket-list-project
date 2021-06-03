@@ -1,23 +1,26 @@
 <h2>Create Your Account</h2>
 
+<span class="req">
 <% if flash.has?(:message) %>
-    <%= flash[:message] %>
-<% end  %>
+    <%= flash[:message].gsub(/\n/, '<br>') %>
+<% end %>
+</span>
 
+<br>
 
 <form method="POST" action="/signup">
 
     <div class="container-form">
 
-    <label for="name">Name</label><span class="required"><small>*</small></span>:
+    <label for="name">Name</label><span class="req">*</span>:
         <input type="text" id="name" name="name" placeholder="Jane Doe" class="form-control">
     <br><br>
 
-    <label for="email">Email</label><span class="required"><small>*</small></span>:
+    <label for="email">Email</label><span class="req">*</span>:
         <input type="text" id="email" name="email" placeholder="jane.doe@unkown.com" class="form-control">
     <br><br>
 
-    <label for="password">Password</label><span class="required"><small>*</small></span>:
+    <label for="password">Password</label><span class="req">*</span>:
         <input type="password" id="password" name="password"  class="form-control">
     <br><br>
 
@@ -29,4 +32,4 @@
 
 </form>
 <br>
-<span><small>*</span>Required fields</small>
+<span class="req">*</span>Required field

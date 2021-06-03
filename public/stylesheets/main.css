@@ -45,10 +45,9 @@ nav ul li a:hover::after {
 }
 
 /* --- Required star --- */
-.required
-{
+.req {
   color: red;
-  size: 3px;
+  font-size: 13px;
 }
 
 @media screen {

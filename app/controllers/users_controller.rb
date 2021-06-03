@@ -13,14 +13,10 @@ class UsersController < ApplicationController
         if !user.valid?
             error = ""
             user.errors.messages.each do |key, value|
-            error << "#{key.to_s}: #{value} "
+            error << "#{key.to_s.capitalize}: #{value.join}\n"
             end
             flash[:message] = error
             redirect '/signup'
-            @user.errors.messages.each do |key, value|
-                puts "#{key}: #{value}"
-            end
-            
         else
             user.save
             session[:user_id] = user.id
@@ -35,11 +31,15 @@ class UsersController < ApplicationController
 
     post '/login' do
         user = User.find_by(email: params[:email])
+
         if user && user.authenticate(params[:password])
             session[:user_id] = user.id
             redirect '/lists'
+        else
+            flash[:message] = "Login failed: invalid email or password"
+            redirect '/login'
         end
-        redirect '/login'
+        
     end
 
     get '/logout' do
