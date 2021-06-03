@@ -22,21 +22,11 @@ class UsersController < ApplicationController
             end
             
         else
-            # @user.valid?
             user.save
             session[:user_id] = user.id
             redirect '/lists'
         end
         
-        
-        # binding.pry
-        # if @user.valid?
-        #     @user.save
-        #     session[:user_id] = user.id
-        #     redirect '/lists'
-        # else
-        #     redirect '/signup'
-        # end
     end
 
     get '/login' do
