@@ -1,0 +1,12 @@
+<h2>Bucket lists of <%= @user.name %></h2>
+
+<div class="gallery">
+<% @user.lists.each do |list| %>
+
+    <div class="card">
+    <a href="/lists/<%= list.id %>"><img src="<%= list.image %>">
+    <%= list.name %></a>
+    </div>
+    
+<% end %>
+</div>

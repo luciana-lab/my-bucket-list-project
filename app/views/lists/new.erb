@@ -1,0 +1,29 @@
+<h2>Create Your Bucket List</h2>
+<br>
+
+<form method="POST" action="/lists">
+
+    <div class="container-form">
+    <strong><label for="create_name">Bucket List Name</label></strong><span class="required"><small>*</small></span>:
+        <input type="text" id="create_name" name="name">
+    <br><br>
+
+    <strong><label for="create_image">Insert Image:</label></strong>
+        <input type="text" id="create_image" name="image" placeholder="paste image link">
+    <br><br>
+
+    <strong><label for="create_description">Description:</label></strong><br>
+        <textarea id="create_description" name="description" row="auto" cols="100" placeholder="Reasons to accomplish this bucket list"></textarea>
+    <br><br>
+
+    <strong><label for="create_to_do">Your List:</label></strong><br>
+        <textarea id="create_to_do" name="to_do" row="auto" cols="100" placeholder="e.g.: Bungee jumping, Visit Las Vegas, Stay awake for more than 24 hours..."></textarea>
+    <br><br>
+
+    <input type="submit" value="Create List">
+
+    </div>
+</form>
+
+<br>
+<span class="required"><small>*</span>Required field</small>

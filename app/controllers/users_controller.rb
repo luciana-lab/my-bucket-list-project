@@ -1,0 +1,78 @@
+require 'rack-flash'
+
+class UsersController < ApplicationController
+    use Rack::Flash
+    
+    get '/signup' do
+        erb :'/users/signup'
+    end
+
+    post '/signup' do
+        user = User.new(name: params[:name], email: params[:email], password: params[:password])
+        
+        if !user.valid?
+            error = ""
+            user.errors.messages.each do |key, value|
+            error << "#{key.to_s}: #{value} "
+            end
+            flash[:message] = error
+            redirect '/signup'
+            @user.errors.messages.each do |key, value|
+                puts "#{key}: #{value}"
+            end
+            
+        else
+            # @user.valid?
+            user.save
+            session[:user_id] = user.id
+            redirect '/lists'
+        end
+        
+        
+        # binding.pry
+        # if @user.valid?
+        #     @user.save
+        #     session[:user_id] = user.id
+        #     redirect '/lists'
+        # else
+        #     redirect '/signup'
+        # end
+    end
+
+    get '/login' do
+        erb :'/users/login'
+    end
+
+    post '/login' do
+        user = User.find_by(email: params[:email])
+        if user && user.authenticate(params[:password])
+            session[:user_id] = user.id
+            redirect '/lists'
+        end
+        redirect '/login'
+    end
+
+    get '/logout' do
+        if logged_in?
+            session.clear
+            redirect '/login'
+        end
+        redirect '/'
+    end
+
+    get '/users/:id' do
+        if !logged_in?
+            redirect '/lists'
+        end
+        @user = User.find_by_id(params[:id])
+        erb :'/users/show'
+    end
+
+    get '/users' do
+        if !logged_in?
+            redirect '/lists'
+        end
+        redirect "/users/#{current_user.id}"
+    end
+
+end

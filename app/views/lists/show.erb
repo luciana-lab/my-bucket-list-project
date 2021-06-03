@@ -1,0 +1,37 @@
+<h2><%= @list.name %></h2>
+
+    <div class="hero-image">
+    <img src="<%= @list.image %>">
+        <div class="hero-text">
+            <p><%= @list.description %></p>
+            <a href="/lists/new"><button>GET STARTED</button></a>
+        </div>
+    </div>
+
+<br>
+
+<ol>
+    <% @list.to_do.split(",").each do |value| %>
+        <li><input type="checkbox"> <%= value %></li>
+    <% end %>
+</ol>
+
+<br><br>
+    <form action="/lists/new" class="list-new-btn form-btn">
+        <button>Create New List</button>
+    </form>
+    <br>
+
+<% if @list.user_id != nil && @list.user == current_user %>
+
+    <form action="/lists/<%= @list.id %>/edit" class="list-edit-btn form-btn">
+        <button>Edit List</button>
+    </form>
+    <br>
+
+    <form method="POST" action="/lists/<%= @list.id %>" class="list-delete-btn form-btn">
+        <input id="hidden" type="hidden" name="_method" value="DELETE">
+        <button>Delete</button>
+    </form>
+
+<% end %>
