@@ -13,6 +13,12 @@ class ApplicationController < Sinatra::Base
     erb :home
   end
 
+  #handle url not found
+  not_found do
+    status 404
+    erb :error
+  end
+
   helpers do
     
     def current_user

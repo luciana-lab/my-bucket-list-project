@@ -21,6 +21,9 @@ class ListsController < ApplicationController
 
     get '/lists/:id' do
         @list = List.find_by_id(params[:id])
+        if !@list
+            not_found
+        end
         erb :'/lists/show'
     end
 
