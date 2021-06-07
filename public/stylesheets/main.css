@@ -372,7 +372,6 @@ background-color: #3498db;
 
 .list-delete-btn button {
   background-color: #c0392b;
-  
 }
 
 .list-new-btn button, .list-edit-btn button, .list-delete-btn button {
@@ -400,6 +399,11 @@ input[type=text], input[type=password], textarea {
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
+}
+
+textarea {
+  grid-row: auto;
+  columns: 100;
 }
 
 input[type=submit] {

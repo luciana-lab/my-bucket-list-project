@@ -14,7 +14,7 @@
     <br><br>
 
     <strong><label for="update_list_description">Update Description:</label></strong><br>
-        <textarea id="update_list_description" name="description" row="auto" cols="100"><%= @list.description %></textarea>
+        <textarea id="update_list_description" name="description"><%= @list.description %></textarea>
     <br><br>
 
     <strong><label for="update_list_to_do">Update List:</label></strong>
@@ -23,7 +23,7 @@
             <li><%= value %></li>
         <% end %>
     </ol>
-        <textarea type="text" id="update_list_to_do" name="to_do" row ="auto" cols="100"><%= @list.to_do %></textarea>
+        <textarea type="text" id="update_list_to_do" name="to_do"><%= @list.to_do %></textarea>
     <br><br>
 
     <input type="submit" value="Update List">

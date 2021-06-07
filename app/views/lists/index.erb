@@ -65,17 +65,17 @@ function showSlides(n) {
 </script>
 
 <div class="gallery">
-    <% @lists.each do |list| %>
-        <a href="/lists/<%= list.id %>">
-        <div class="card">
-        <img src="<%= list.image %>" alt="Bucket List image">
-        <div class="desc"><%= list.name %></div>
-        </div>
-        </a>
-    <% end %>
-
-    <a href="/lists/new">
-        <img src="https://corefact-marketing.s3-us-west-1.amazonaws.com/random/upload-image.png" alt="Upload image">
-        <div class="desc">Create your list</div>
+  <% @lists.each do |list| %>
+    <a href="/lists/<%= list.id %>">
+    <div class="card">
+      <img src="<%= list.image %>" alt="Bucket List image">
+      <div class="desc"><%= list.name %></div>
+      </div>
     </a>
+  <% end %>
+
+  <a href="/lists/new">
+    <img src="https://corefact-marketing.s3-us-west-1.amazonaws.com/random/upload-image.png" alt="Upload image">
+    <div class="desc">Create your list</div>
+  </a>
 </div>
