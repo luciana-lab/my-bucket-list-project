@@ -3,10 +3,9 @@
 <span class="req">
 <% if flash.has?(:message) %>
     <%= flash[:message].gsub(/\n/, '<br>') %>
+    <br>
 <% end %>
 </span>
-
-<br>
 
 <form method="POST" action="/signup">
 
