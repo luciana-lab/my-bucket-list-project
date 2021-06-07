@@ -37,7 +37,7 @@ A list belongs to a user and a user has many lists
 A list has a name, a description, an image url, a to do list, and an user id
 A user has a name, email address, and password
 
-Flow diagram [here]()\
+Flow diagram [here](https://drive.google.com/file/d/1ZTPE_YMM91jfNekATL3RIntcUvOFBTA8/view?usp=sharing)
 ## Instalation
 Fork and clone this repo.
 
@@ -46,7 +46,12 @@ Install all the gems with:
     $ bundle install
 ```
 
-And then execute the databse:
+Execute the databse:
+```
+    rake db:migrate
+```
+
+And then populate the database:
 ```
     rake db:seed
 ```
@@ -54,7 +59,7 @@ And then execute the databse:
 
 To run use `shotgun`
 
-and go to you local web server `http://127.0.0.1:9393/`
+and go to you [local web server](http://127.0.0.1:9393/)
 ## Contributing
 
 This project is intended to be a safe and welcoming space for collaboration.
@@ -69,6 +74,6 @@ The gem is available as open source under the terms of the [MIT License](https:/
 Everyone interacting in the My Bucket List project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/luciana-lab/my-bucket-list/blob/master/CODE_OF_CONDUCT.md).
 
 ## Extras
-Project Walkthrough Video [here]()\
+Project Walkthrough Video [here](https://youtu.be/_Bb-MrKRYVg)\
 Blog Post [here]()\
 30 minutes video coding [here](https://youtu.be/YtXW9zKNDGU)

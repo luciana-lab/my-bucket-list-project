@@ -55,6 +55,7 @@ class UsersController < ApplicationController
             redirect '/lists'
         end
         @user = User.find_by_id(params[:id])
+        # @list = List.find_by_id(params[:id])
         erb :'/users/show'
     end
 

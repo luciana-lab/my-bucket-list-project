@@ -22,16 +22,16 @@
     </form>
     <br>
 
-<% if @list.user_id != nil && @list.user == current_user %>
+<% if @list.user == current_user %>
 
     <form action="/lists/<%= @list.id %>/edit" class="list-edit-btn form-btn">
-        <button>Edit List</button>
+        <button type="submit">Edit List</button>
     </form>
     <br>
 
     <form method="POST" action="/lists/<%= @list.id %>" class="list-delete-btn form-btn">
         <input id="hidden" type="hidden" name="_method" value="DELETE">
-        <button>Delete</button>
+        <button type="submit">Delete</button>
     </form>
 
 <% end %>

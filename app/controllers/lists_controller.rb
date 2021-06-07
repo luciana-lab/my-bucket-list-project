@@ -13,7 +13,9 @@ class ListsController < ApplicationController
     post '/lists' do
         redirect_if_not_logged_in
 
-        @list = List.create(name: params[:name], description: params[:description], to_do: params[:to_do], image: params[:image])
+        @list = List.new(name: params[:name], description: params[:description], to_do: params[:to_do], image: params[:image])
+        @list.user = current_user
+        @list.save
         redirect "/lists/#{@list.id}"
     end
 
@@ -45,7 +47,7 @@ class ListsController < ApplicationController
         
     end
 
-    post '/lists/:id/delete' do
+    delete '/lists/:id' do
         redirect_if_not_logged_in
 
         @list = List.find_by_id(params[:id])
