@@ -55,9 +55,7 @@ class UsersController < ApplicationController
             redirect '/lists'
         end
         @user = User.find_by_id(params[:id])
-        if !@user
-            not_found
-        end
+        redirect_if_not_user
         erb :'/users/show'
     end
 
@@ -66,6 +64,13 @@ class UsersController < ApplicationController
             redirect '/lists'
         end
         redirect "/users/#{current_user.id}"
+    end
+
+    private
+    def redirect_if_not_user
+        if @user != current_user
+            redirect '/lists'
+        end
     end
 
 end

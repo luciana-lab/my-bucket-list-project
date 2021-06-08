@@ -75,5 +75,5 @@ Everyone interacting in the My Bucket List project's codebases, issue trackers, 
 
 ## Extras
 Project Walkthrough Video [here](https://youtu.be/_Bb-MrKRYVg)\
-Blog Post [here]()\
+Blog Post [here](https://luciana-lab.medium.com/displaying-error-messages-in-sinatra-step-by-step-34b080793266)\
 30 minutes video coding [here](https://youtu.be/YtXW9zKNDGU)
