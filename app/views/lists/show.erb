@@ -1,7 +1,7 @@
 <h2><%= @list.name %></h2>
 
     <div class="hero-image">
-    <img src="<%= @list.image %>">
+    <img src="<%= @list.image %>" onerror="this.onerror=null;this.src='https://corefact-marketing.s3-us-west-1.amazonaws.com/random/default-image.png';">
         <div class="hero-text">
             <p><%= @list.description %></p>
             <a href="/lists/new"><button>GET STARTED</button></a>

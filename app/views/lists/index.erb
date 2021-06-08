@@ -68,7 +68,7 @@ function showSlides(n) {
   <% @lists.each do |list| %>
     <a href="/lists/<%= list.id %>">
     <div class="card">
-      <img src="<%= list.image %>" alt="Bucket List image">
+      <img src="<%= list.image %>" alt="Bucket List image" onerror="this.onerror=null;this.src='https://corefact-marketing.s3-us-west-1.amazonaws.com/random/default-image.png';">
       <div class="desc"><%= list.name %></div>
       </div>
     </a>
