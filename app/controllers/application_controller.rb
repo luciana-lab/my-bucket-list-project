@@ -24,10 +24,10 @@ class ApplicationController < Sinatra::Base
     end
     
     #handle url not found
-    # not_found do
-    # status 404
-    # erb :error
-    # end
+    not_found do
+    status 404
+    erb :error
+    end
   end
 
 end

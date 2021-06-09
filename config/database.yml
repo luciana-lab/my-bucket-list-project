@@ -6,4 +6,6 @@ development:
 production:
   adapter: postgresql
   encoding: unicode
+  database: production
+  host: <% ENV['DATABASE_HOST'] %>
   pool: 5
