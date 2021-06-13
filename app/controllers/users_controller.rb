@@ -9,7 +9,7 @@ class UsersController < ApplicationController
 
     post '/signup' do
         user = User.new(name: params[:name], email: params[:email], password: params[:password])
-        
+
         if !user.valid?
             error = ""
             user.errors.messages.each do |key, value|
