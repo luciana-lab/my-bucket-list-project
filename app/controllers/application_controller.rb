@@ -23,7 +23,6 @@ class ApplicationController < Sinatra::Base
       !!current_user
     end
     
-    #handle url not found
     not_found do
     status 404
     erb :error

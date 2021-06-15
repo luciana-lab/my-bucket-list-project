@@ -78,4 +78,4 @@ Project Walkthrough Video [here](https://youtu.be/_Bb-MrKRYVg)\
 Blog Post [here](https://luciana-lab.medium.com/displaying-error-messages-in-sinatra-step-by-step-34b080793266)\
 Heroku link [here](https://my-bucket-list-sinatra-project.herokuapp.com/)\
 30 minutes video coding [here](https://youtu.be/YtXW9zKNDGU)\
-GitHub 1st Repo [here](https://github.com/luciana-lab/my-bucket-list)
+GitHub 1st Repo [here](https://github.com/luciana-lab/my-bucket-list) had an issue when trying to commit and push.
