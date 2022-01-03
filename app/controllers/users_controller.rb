@@ -10,7 +10,8 @@ class UsersController < ApplicationController
     post '/signup' do
         user = User.new(name: params[:name], email: params[:email], password: params[:password])
 
-        if !user.valid?
+        # if !user.valid?
+        if params[:name] == "" || params[:email] == "" || params[:password] == "" || User.find_by(email: params[:email])
             error = ""
             user.errors.messages.each do |key, value|
             error << "#{key.to_s.capitalize}: #{value.join}\n"
