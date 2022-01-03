@@ -38,7 +38,7 @@ A list has a name, a description, an image url, a to do list, and an user id
 A user has a name, email address, and password
 
 Flow diagram [here](https://drive.google.com/file/d/1ZTPE_YMM91jfNekATL3RIntcUvOFBTA8/view?usp=sharing)
-## Instalation
+## Installation
 Fork and clone this repo.
 
 Install all the gems with:
@@ -74,8 +74,8 @@ The gem is available as open source under the terms of the [MIT License](https:/
 Everyone interacting in the My Bucket List project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/luciana-lab/my-bucket-list/blob/master/CODE_OF_CONDUCT.md).
 
 ## Extras
+Live Project Heroku [here](https://my-bucket-list-sinatra-project.herokuapp.com/)\
 Project Walkthrough Video [here](https://youtu.be/_Bb-MrKRYVg)\
 Blog Post [here](https://luciana-lab.medium.com/displaying-error-messages-in-sinatra-step-by-step-34b080793266)\
-Heroku link [here](https://my-bucket-list-sinatra-project.herokuapp.com/)\
 30 minutes video coding [here](https://youtu.be/YtXW9zKNDGU)\
 GitHub 1st Repo [here](https://github.com/luciana-lab/my-bucket-list) had an issue when trying to commit and push.
